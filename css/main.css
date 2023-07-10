@@ -6,6 +6,21 @@ body {
 
 .main {
     background-color: #252525;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-lim {
+    background-color: #252525;
+    height: 1311px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-liu {
+    background-color: #252525;
+    height: 1311px;
     width: 100%;
     margin: 0 auto;
 }
@@ -33,12 +48,26 @@ body {
     accent-color: #65aa65;
 }
 
+.lirunia input {
+    height: 20px;
+    width: 20px;
+    accent-color: #65aa65;
+}
+
 .menu label {
     vertical-align: middle;
     display: table-cell;
 }
 
 .limgrave {
+    margin: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    border: 0;
+}
+
+.liurnia {
     margin: 5px;
     font-weight: bold;
     display: flex;
@@ -89,12 +118,24 @@ input[type=checkbox] {
     margin: 3px;
 }
 
-.areas-btn {
+.liurnia-btn {
     display: flex;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
     align-items: center;
+    border-left: solid 3px white;
+    border-right: solid 3px white;
+    border-bottom: solid 3px white;
+}
+
+.liurnia-btn h1 {
+    margin: 3px;
+}
+
+.areas-btn {
+    display: flex;
+    justify-content: center;
 }
 
 .home-btn {

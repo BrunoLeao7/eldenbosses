@@ -1,35 +1,398 @@
-<html>
-    
-    <head>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./css/main.css">
-        <title>Elden Ring Bosses</title>
-    </head>  
-    
-    <body>
-        <div class="main">
-            <header class="main-title">
-                <h1 class="title">
-                    Elden Ring Bosses
-                </h1>
-            </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring - Boss Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="elden-ring-symbol"></div>
+            <h1 class="title">ELDEN RING</h1>
+            <p class="subtitle">Boss Tracker</p>
+        </header>
 
-            <div class="areas-btn">
-                <div class="limgrave-btn">
-                    <h1>Limgrave</h1>
-                    <a href="./limgrave.html"><img src="./img/limgrave.jpg" alt=""></a>
-                </div>
-
-                <div class="liurnia-btn">
-                    <h1>Liurnia</h1>
-                    <a href="./liurnia.html"><img src="./img/liurnia.jpg" alt=""></a>
-                </div>
+        <div class="progress-section">
+            <div class="progress-info">
+                <span class="progress-label">Total Progress</span>
+                <span id="boss-counter" class="counter">0 / 79</span>
             </div>
-
+            <div class="progress-bar-wrapper">
+                <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+            </div>
+            <span id="progress-text" class="progress-percent">0%</span>
         </div>
 
-        <script src="./js/script.js"></script>
+        <div class="categories">
+            <!-- LIMGRAVE -->
+            <details class="boss-category">
+                <summary>
+                    <span class="category-name">Limgrave & Weeping Peninsula</span>
+                    <span class="category-count">0/0</span>
+                </summary>
+                <div class="boss-list">
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Ancient Hero of Zamor</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Ancient_Hero_of_Zamor" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=165411" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
 
-    </body>
-    
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Beastman of Farum Azula</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Beastman_of_Farum_Azula/Boss_(Groveside_Cave)" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164472" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Bell Bearing Hunter</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Elemer_of_the_Briar#Warmaster's_Shack-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=165725" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Black Knife Assassin</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Black_Knife_Assassin#Deathtouched_Catacombs-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164530" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Bloodhound Knight Darriwil</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Bloodhound_Knight#Forlorn_Hound_Evergaol-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164486" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Cemetery Shade</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Cemetery_Shade#Tombsward_Catacombs-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=165317" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Crucible Knight</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Crucible_Knight#Stormhill_Evergaol-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164476" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Deathbird (Limgrave)</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Deathbird#Limgrave-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=165457" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Deathbird (Weeping Peninsula)</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Deathbird#Weeping_Peninsula-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=166054" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Demi-Human Chief</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Demi-Human#Fierce_Demi-Human-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164457" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Erdtree Avatar</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Erdtree_Avatar#Weeping_Peninsula-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=165321" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Erdtree Burial Watchdog (Stormfoot Catacombs)</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Erdtree_Burial_Watchdog#Stormfoot_Catacombs-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164467" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Erdtree Burial Watchdog (Impaler's Catacombs)</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Erdtree_Burial_Watchdog#Impaler's_Catacombs-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=165949" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Flying Dragon Agheel</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Dragon#Flying_Dragon_Agheel-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164484" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Godrick the Grafted</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Godrick_the_Grafted" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164421" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Grafted Scion</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Grafted_Scion" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164433" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Grave Warden Duelist</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Grave_Warden_Duelist#Murkwater_Catacombs-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164499" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Guardian Golem</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Guardian_Golem" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164509" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Leonine Misbegotten</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Misbegotten_Warrior#Leonine_Misbegotten-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164812" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Mad Pumpkin Head</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Mad_Pumpkin_Head#Waypoint_Ruins-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164490" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>  
+                    
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Margit, the Fell Omen</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Margit,_the_Fell_Omen" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=163938" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Miranda the Blighted Bloom</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Miranda_Blossom" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=165743" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Night's Cavalry (Limgrave)</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Night%27s_Cavalry#Limgrave-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164488" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+                    
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Night's Cavalry (Weeping Peninsula)</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Night%27s_Cavalry#Weeping_Peninsula-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164659" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Patches</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Patches" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164504" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Runebear</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Runebear" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=165462" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Scaly Misbegotten</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Misbegotten#Bosses" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=165453" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Soldier of Godrick</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Godrick_Soldier#Soldier_of_Godrick-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164420" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Stonedigger Troll</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Troll#Limgrave_Tunnels-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164478" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Tibia Mariner</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Tibia_Mariner" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164859" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Tree Sentinel</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Tree_Sentinel#Limgrave-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164444" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Ulcerated Tree Spirit</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Ulcerated_Tree_Spirit#Ulcerated_Tree_Spirit-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=164143" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+                </div>
+            </details>
+
+            <!-- LIURNIA OG THE LAKES -->
+            <details class="boss-category">
+                <summary>
+                    <span class="category-name">Liurnia of the Lakes</span>
+                    <span class="category-count">0/0</span>
+                </summary>
+                <div class="boss-list">
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Adan, Thief of Fire</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Adan,_Thief_of_Fire" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=166505" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Alecto, Black Knife Ringleader</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Black_Knife_Assassin#Alecto,_Black_Knife_Ringleader-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=171212" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Bell Bearing Hunter</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Elemer_of_the_Briar#Church_of_Vows-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=165744" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Black Knife Assassin</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Black_Knife_Assassin#Black_Knife_Catacombs-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=166482" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Bols, Carian Knight</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Troll#Bols,_Carian_Knight-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+
+                    <label class="boss-item">
+                        <input type="checkbox" class="boss-checkbox">
+                        <span class="boss-name">Cemetery Shade</span>
+                        <span class="boss-links">
+                            <a href="https://eldenring.wiki.gg/wiki/Cemetery_Shade#Black_Knife_Catacombs-0" target="_blank" title="Wiki">📖</a>
+                            <a href="https://mapgenie.io/elden-ring/maps/the-lands-between?locationIds=166484" target="_blank" title="MapGenie">🗺️</a>
+                        </span>
+                    </label>
+                </div>
+            </details>
+        </div>
+
+        <div class="footer">
+            <button id="reset-btn" class="reset-button">Reset Progress</button>
+            <p class="footer-text">Your data is saved automatically in the browser, locally.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

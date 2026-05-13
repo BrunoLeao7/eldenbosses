@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    https://brunoleao7.github.io/eldenbosses/
+    https://eldenbosses.vercel.app/
 </p>
 
 

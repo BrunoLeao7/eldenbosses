@@ -90,7 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const bossItem = checkbox.closest('.boss-item');
         const bossNameEl = bossItem.querySelector('.boss-name');
         const bossName = bossNameEl.textContent.trim();
-        const bossId = slugify(bossName);
+
+        // Inclui o nome da categoria na chave para evitar colisões entre regiões
+        // Ex: "bell-bearing-hunter" em Limgrave e Liurnia ficam com chaves distintas
+        const categoryEl = checkbox.closest('.boss-category');
+        const categoryName = categoryEl
+            ? categoryEl.querySelector('.category-name').textContent.trim()
+            : 'unknown';
+        const bossId = slugify(categoryName) + '--' + slugify(bossName);
 
         // Restaura estado salvo
         if (bossStatus[bossId] === true) {
